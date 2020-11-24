@@ -1,0 +1,30 @@
+button.bt {
+	background: #5d4bf7;
+	width: 160px; 
+	height: 100px; 
+	border: solid 0 #4b4b4b;
+	transition-property: all;
+	transition-duration: 1s;
+	margin: 10px;
+}
+
+button.bt.first:focus{
+	background: linear-gradient(to top left,White, #6287ff);
+	transform: rotateX(90deg);
+	color: rgb(25, 0, 255);
+	box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0,);
+}
+
+button.bt.second:focus {
+	background: linear-gradient(to top left,White, #8cff70);
+	width: 300px;
+	color: rgb(0, 255, 34);
+	box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0,);
+}
+
+button.bt.third:focus {
+	background: linear-gradient(to top left,White, #ff61b8);
+	color: rgb(255, 0, 106);
+	opacity: 0;
+	box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0,);
+}

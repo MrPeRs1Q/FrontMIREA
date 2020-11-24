@@ -1,0 +1,13 @@
+.formula {
+    font-style: italic;
+    font-size: 36px;
+}
+.square {
+    border-top: 1px solid #000000;
+}
+.square:before {
+    content: '√';
+    border-top: 1px solid rgb(255, 255, 255);
+    font-size: 40px;
+    vertical-align: top;
+}
