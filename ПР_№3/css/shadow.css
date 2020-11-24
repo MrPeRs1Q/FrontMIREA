@@ -1,0 +1,18 @@
+div {
+    text-align: center;
+    margin-top: 10em;
+}
+
+img {
+    box-shadow: 15px 0 10px rgb(30, 144, 255),
+                0 15px 20px rgb(138, 43, 226),
+                -15px 0 10px rgb(231, 60, 140),
+                0 -15px 20px rgb(0, 255, 234);
+}
+img:hover{
+    box-shadow: 15px 0 10px rgb(231, 60, 140),
+                0 15px 20px rgb(0, 255, 234),
+                -15px 0 10px rgb(30, 144, 255),
+                0 -15px 20px rgb(137, 43, 224);
+    transition: 1s;
+}

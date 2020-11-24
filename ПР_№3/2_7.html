@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        form {
+            width: 40%;
+            background-color: rgb(197, 255, 192);
+            border-radius: 10px;
+            border: 2px solid rgb(212, 0, 255);
+        }
+        .data {
+            margin: 20px auto;
+        }
+        label, input {
+            font: bold 16px Comfortaa, sans-serif;
+            margin-left: 10px;
+        }
+        input {
+            height: 20px;
+        }
+        .required {
+            position: absolute;
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            background: url(img/cancel.png) no-repeat;
+        }
+        input:valid + .required {
+            background: url(img/check.png);
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="data">
+        <label for="name">Имя пользователя</label>
+        <input type="text" id="name" size="50" pattern="^[А-Яа-яЁё]+$" required><label class="required"></label>
+    </div>
+    <div class="data">
+        <label for="num">Сколько вам лет?</label>
+        <input type="number" id="num" min="1" max="100" required><label class="required"></label>
+    </div>
+    <div class="data">
+        <label for="choice">Вы учитесь или работаете?</label>
+        <input type="text" id="choice" pattern="^[А-Яа-яЁё]+$" required><label class="required"></label>
+    </div>
+    <div class="data">
+        <label for="time">Сколько у вас свободного времени?</label>
+        <input type="text" id="time" required><label class="required"></label>
+    </div>
+    <div class="data">
+        <label for="free-time">Что вы делаете в свободное время?</label>
+        <input type="text" id="free-time" required><label class="required"></label>
+    </div>
+    <div class="data">
+        <input type="submit" id="btn" value="Отправить">
+    </div>
+</form>
+</body>
+</html>

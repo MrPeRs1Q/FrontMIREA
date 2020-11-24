@@ -1,0 +1,10 @@
+body {
+    font-size: 10px;
+}
+p {
+    font-family: serif;
+    font-size: 3rem;
+}
+.sub {
+    vertical-align: sub;
+}
