@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Практика 7(2)</title>
+</head>
+<body>
+<!-- 2.1 -->
+			
+<button onclick="buttonClick()">Нажми на меня</button>
+<input type="text" id="input" value="Привет мир!">
+
+<!-- 2.2 -->
+<p>
+<button onclick="buttonClick1()">Нажми на меня</button>
+<img id="foto" src="drops.jpg" style="width: 300px; height: 200px;" >
+</p>
+
+<script>
+/* 2.1 */
+
+	function buttonClick() {
+	var input = document.getElementById('input');
+	input.value = 'Hello world!';
+	}
+	
+/* 2.2 */
+
+	function buttonClick1() {
+	var img = document.getElementById('foto');
+	img.src = 'leaf.jpg';
+	}
+	
+/*===========*/
+</script>
+</body>
+</html>

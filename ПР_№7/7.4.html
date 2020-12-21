@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Практика 7(4)</title>
+</head>
+<body>
+<!-- 4.1, 4.2, 4.3 -->
+
+<input type="text" value="Начальный текст" style="width: 100px" id = "input">
+<br>
+<br>
+<button onclick="buttonClick()">Кнопка 1</button>
+<button onclick="button1Click()">Кнопка 2</button>
+<button onclick="button2Click()">Кнопка 3</button>
+
+<!-- 4.1, 4.2, 4.3 -->
+<script>
+/*4.1, 4.2, 4.3*/
+
+	function buttonClick(elem){
+	var elem = document.getElementById('input');
+	elem.value = 'Измененный текст';
+	elem.style.width = '150px';
+	elem.style.height = '50px';
+	elem.style.color = 'red';
+	elem.style.borderRadius = '10px';
+	}
+			
+	function button1Click(elem){
+	var elem = document.getElementById('input');
+	elem.style.display = 'none';
+	}
+
+	function button2Click(elem){
+	var elem = document.getElementById('input');
+	elem.style.display = 'inline';
+	}
+	
+/*========*/
+</script>
+</body>
+</html>

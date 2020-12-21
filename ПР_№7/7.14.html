@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Практика 7 (14)</title>
+</head>
+<body>
+  <fieldset id="contents">
+    <legend>#contents</legend>
+    <p>
+      <a href="http://mirea.ru">Ссылка для перехода к контенту</a>.
+    </p>
+  </fieldset>
+
+  <script>
+    contents.onclick = function(event) {
+
+      function handleLink(href) {
+        let isLeaving = confirm(`Leave for ${href}?`);
+        if (!isLeaving) return false;
+      }
+
+      var target = event.target.closest('a');
+
+      if (target && contents.contains(target)) {
+        return handleLink(target.getAttribute('href'));
+      }
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Практика 7(13)</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+
+    .tooltip {
+      position: fixed;
+      padding: 10px 20px;
+      border: 1px solid #b3c9ce;
+      text-align: center;
+      background: #9f9f9f;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p>Наведите курсор на кнопку 1</p>
+  <p>Наведите курсор на кнопку 2</p>
+
+  <button data-tooltip="Полезная информация 1">Кнопка 1</button>
+  <button data-tooltip="Полезная информация<br>2">Кнопка 2</button>
+
+
+
+  <script>
+    var tooltipElem;
+
+    document.onmouseover = function(event) {
+      var target = event.target;
+
+
+      var tooltipHtml = target.dataset.tooltip;
+      if (!tooltipHtml) return;
+
+
+      tooltipElem = document.createElement('div');
+      tooltipElem.className = 'tooltip';
+      tooltipElem.innerHTML = tooltipHtml;
+      document.body.append(tooltipElem);
+
+      var coords = target.getBoundingClientRect();
+
+      var left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
+      if (left < 0) left = 0; 
+
+      var top = coords.top - tooltipElem.offsetHeight - 5;
+      if (top < 0) { 
+        top = coords.top + target.offsetHeight + 5;
+      }
+
+      tooltipElem.style.left = left + 'px';
+      tooltipElem.style.top = top + 'px';
+    };
+
+    document.onmouseout = function(e) {
+
+      if (tooltipElem) {
+        tooltipElem.remove();
+        tooltipElem = null;
+      }
+
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Практика 8(1)</title>
+	<style>
+    #lamba {
+      position: relative;
+      width: 100%px;
+	  height: 75px;
+    }
+  	</style>
+</head>
+<body>
+<img id="lamba" src="lamba.png">
+<script>
+    lamba.onclick = function() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        lamba.style.left = timePassed / 5 + 'px';
+
+        if (timePassed > 7000) clearInterval(timer);
+
+      }, 20);
+    }
+</script>
+</body>
+</html>

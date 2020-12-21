@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Практика 7(6)</title>
+</head>
+<body>
+<!-- 6.1 -->
+
+<div style="display:flex;">
+<div>
+<p class = "test1">Абзац с текстом</p>
+<p class = "test1">Абзац с текстом</p>
+<p class = "test1">Абзац с текстом</p>
+<input type="submit" value="Нажмите на меня!" onclick="change1()" id = "input">
+</div>
+
+<!-- 6.2 -->
+
+<div style="display:flex; margin-left: 30px;">
+<div>
+<p class = "test2">Абзац с текстом</p>
+<p class = "test2">Абзац с текстом</p>
+<p class = "test2">Абзац с текстом</p>
+<p class = "test2">Абзац с текстом</p>
+<p class = "test2">Абзац с текстом</p>
+<p class = "test2">Абзац с текстом</p>
+<p class = "test2">Абзац с текстом</p>
+<p class = "test2">Абзац с текстом</p>
+<input type="submit" value="Нажмите на меня!" onclick="change2()" id = "input">
+</div>
+
+<!-- 6.3 -->
+
+<div style="margin-left: 30px;">
+<p class = "test3">Абзац с текстом</p>
+<p class = "test3">Абзац с текстом</p>
+<p class = "test3">Абзац с текстом</p>
+<p class = "test3">Абзац с текстом</p>
+<p class = "test3">Абзац с текстом</p>
+<p class = "test3">Абзац с текстом</p>
+<p class = "test3">Абзац с текстом</p>
+<p class = "test3">Абзац с текстом</p>
+<input type="submit" value="Нажмите на меня!" onclick="change3()" id = "input">
+</div>
+</div>
+
+<script>
+/* 6.1 */
+
+		function change1(){
+		var elems1 = document.querySelectorAll('p.test1');
+		for (var i = 0; i < elems1.length-1; i++) {
+		elems1[i].innerHTML = "Новый текст";
+			}
+		}
+		
+/* 6.3 */
+		
+		function change2(){
+		var elems2 = document.querySelectorAll('p.test2');
+		for (var i = 0; i < elems2.length; i++) {
+		elems2[i].innerHTML = "Новый текст";
+			}
+		}
+		
+/* 6.3 */
+		
+		function change3(){
+		var elems3 = document.querySelectorAll('p.test3');
+		for (var i = 0; i <= elems3.length; i++) {
+		elems3[i].innerHTML = i + '. ' + elems3[i].innerHTML;
+			}
+		}
+/*=========================*/
+</script>
+
+</body>
+</html>

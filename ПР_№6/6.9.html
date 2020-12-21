@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Практика 6(9)</title>
+</head>
+<body>
+<script>
+/*9.1*/
+
+	var str = 'я учу javascript!'
+	document.write(str.length);
+	document.write('<br>' + '========' + '<br>');
+	
+/*9.2*/
+	
+	document.write(str.substr(2, 3));
+	document.write('<br>');
+	document.write(str.substring(2, 5));
+	document.write('<br>');
+	document.write(str.slice(2, 5));
+	document.write('<br>' + '========' + '<br>');
+	
+/*9.3*/
+	
+	document.write(str.indexOf('учу'));
+	document.write('<br>' + '========' + '<br>');
+	
+/*9.4*/	
+
+	var n = 10;
+	if (str.length > n) {
+	var result = str.slice(0, 10);
+	alert(result + '...')
+	} else if (str.length < n) {
+	var result = str;
+	alert(result)
+	}
+	
+/*=========*/	
+</script>
+</body>
+</html>
